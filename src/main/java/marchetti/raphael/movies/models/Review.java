@@ -1,4 +1,4 @@
-package models;
+package marchetti.raphael.movies.models;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;

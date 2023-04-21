@@ -1,4 +1,4 @@
-package models;
+package marchetti.raphael.movies.models;
 
 import java.util.List;
 
