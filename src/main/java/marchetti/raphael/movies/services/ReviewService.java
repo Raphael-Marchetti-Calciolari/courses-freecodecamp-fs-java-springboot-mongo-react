@@ -11,7 +11,7 @@ import marchetti.raphael.movies.models.Review;
 import marchetti.raphael.movies.repositories.ReviewRepository;
 
 @Service
-public class ReviewServices {
+public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
 
