@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/movies") // this controller will handle requests in this endpoint
 public class MoviesController {
     @GetMapping
-    public ResponseEntity<String> allMovies() {
+    public ResponseEntity<String> getAllMovies() {
         return new ResponseEntity<String>("All Movies", HttpStatus.OK);
     }
 }
