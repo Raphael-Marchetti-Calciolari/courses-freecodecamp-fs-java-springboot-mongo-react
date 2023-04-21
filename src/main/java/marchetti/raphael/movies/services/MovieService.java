@@ -21,7 +21,7 @@ public class MovieService {
         return movieRepository.findAll(); // described inside MongoRepository class (extended by our movie repository)
     }
 
-    public Optional<Movie> singleMovie(ObjectId id){
-        return movieRepository.findById(id); // may not find a Movie, so it will have to return null -> Optional<Movie>
+    public Optional<Movie> singleMovie(String imdbId){
+        return movieRepository.findMovieByImdbId(imdbId);
     }
 }
