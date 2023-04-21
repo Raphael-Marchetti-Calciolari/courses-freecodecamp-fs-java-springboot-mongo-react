@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import marchetti.raphael.movies.services.MovieService;
 
 @RestController
 @RequestMapping("/api/v1/movies") // this controller will handle requests in this endpoint - doesn't work when hitting /api/v1/movies/
+@CrossOrigin(origins = "*")
 public class MoviesController {
 
     @Autowired
