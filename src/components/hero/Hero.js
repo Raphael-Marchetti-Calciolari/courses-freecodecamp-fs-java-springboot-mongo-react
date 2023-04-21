@@ -8,8 +8,8 @@ const Hero = ({movies}) => {
     <div>
         <Carousel>
         {
-            movies.map((movie) => {
-                reutrn (
+            movies?.map((movie) => {
+                return (
                     <Paper>
                         <div className="movie-card-container">
                             <div className="movie-card">
