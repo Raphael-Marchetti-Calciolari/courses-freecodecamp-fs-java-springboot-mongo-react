@@ -16,4 +16,9 @@ public class Review {
     @Id
     private ObjectId id;
     private String body;
+
+    // Single parameter constructor
+    public Review(String body){
+        this.body = body;
+    }
 }
