@@ -1,7 +1,9 @@
 package marchetti.raphael.movies.services;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +19,9 @@ public class MovieService {
 
     public List<Movie> allMovies() {
         return movieRepository.findAll(); // described inside MongoRepository class (extended by our movie repository)
+    }
+
+    public Optional<Movie> singleMovie(ObjectId id){
+        return movieRepository.findById(id); // may not find a Movie, so it will have to return null -> Optional<Movie>
     }
 }
