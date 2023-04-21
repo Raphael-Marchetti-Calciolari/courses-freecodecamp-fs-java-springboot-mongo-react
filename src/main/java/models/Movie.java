@@ -5,6 +5,7 @@ import java.util.List;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,4 +25,6 @@ public class Movie {
     private List<String> genres;
     private String poster;
     private List<String> backdrops;
+    @DocumentReference // database stores only the ids of the reviews, and the reviews are in another collection -> manual reference relationship
+    private List<Review> reviewIds;
 }
