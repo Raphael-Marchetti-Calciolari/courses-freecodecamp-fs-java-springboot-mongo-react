@@ -12,6 +12,7 @@ function App() {
   const getMovies = async () => {
     try{
       const response = await api.get('/api/v1/movies');
+      console.log(response);
       setMovies(response.data);
     }
     catch (err){
@@ -28,7 +29,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path="/" element={<Home/>}>
+          <Route path="/" element={<Home movies={movies}/>}>
 
           </Route>
         </Route>
