@@ -9,6 +9,7 @@ import Home from './components/home/Home';
 import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
 import Reviews from './components/reviews/Reviews';
+import Notfound from './components/notFound/Notfound';
 
 function App() {
   const [movies, setMovies] = useState();
@@ -54,6 +55,7 @@ function App() {
             setReviews={setReviews}
             movie={movie}
           />}></Route>
+          <Route path="*" element={<Notfound/>}></Route>
         </Route>
       </Routes>
 
