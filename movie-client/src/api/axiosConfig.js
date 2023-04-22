@@ -1,22 +1,10 @@
 import axios from 'axios';
+// require('dotenv').config();
 
-function getFirstNonLocalhostIPv4() {
-    const nets = Object.values(networkInterfaces());
-    let ipv4 = '';
-  
-    for (const net of nets) {
-      const familyV4Value = net.family === 'IPv4' ? 'IPv4' : 4;
-      if (net.family === familyV4Value && !net.internal && net.address !== '127.0.0.1') {
-        ipv4 = net.address;
-        break;
-      }
-    }
-  
-    return ipv4;
-  }
-  
-const host_local_ip = getFirstNonLocalhostIPv4()
+// const host = process.env.HOST
+const host="192.168.15.8"
 
 export default axios.create({
-    baseURL: `http://${host_local_ip}:8080`
+    baseURL: `http://${host}:8080`,
+    // headers: {}
 })
